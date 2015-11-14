@@ -79,17 +79,17 @@ CDRTOOLSURL=$BASEURL$CDRTOOLS$EXTENSION
 # ---------------------------------------------------------------------------
 
 # Make $CDRTOOLSDIR
-mkdir $CDRTOOLSDIR
+mkdir "$CDRTOOLSDIR"
 
 # Get latest cdrtools from SourceForge
-wget -P $TMPDIR $CDRTOOLSURL
+wget -P "$TMPDIR" "$CDRTOOLSURL"
 
 # Unpack to $CDRTOOLSDIR
-tar xfv $CDRTOOLSDIR$EXTENSION -C $CDRTOOLSDIR --strip-components=1
+tar xfv "$CDRTOOLSDIR""$EXTENSION" -C "$CDRTOOLSDIR" --strip-components=1
 
 # Compile and install
-make -C $CDRTOOLSDIR
-make -C $CDRTOOLSDIR install
+make -C "$CDRTOOLSDIR"
+make -C "$CDRTOOLSDIR" install
 
 # Move the following files (some will be links) from /usr/bin to a junk folder
 mkdir /opt/schily/replacedfiles
@@ -110,4 +110,4 @@ ln -s /opt/schily/bin/mkhybrid /usr/bin/mkhybrid
 ln -s /opt/schily/bin/cdda2wav /usr/bin/cdda2wav
 
 # Remove working folder
-rm -r $CDRTOOLSDIR
+rm -r "$CDRTOOLSDIR"
