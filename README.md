@@ -22,6 +22,8 @@ This is very easy since all is done by issuing
 
 This needs **sudo** rights since it will write to `/usr/bin`, for example. You can obviously check the source code if you think it's going to do anything nasty.
 
+This command assumes you have the package 'build-essential' installed and want the script to run with the default settings. Otherwise download it (`wget https://github.com/RJ-Jesus/cdrtools-fix/raw/master/cdrtools_fix.sh`) and check the help page (`cdrtools_fix.sh -h`).
+
 ## Conclusions
 
 After replacing **genisoimage et al.** with **cdrtools** this is what I got trying to again create an ISO image of Slackware-current
