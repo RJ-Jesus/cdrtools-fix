@@ -52,7 +52,7 @@ do
 	echo "                $BASEURL"
         exit
         ;;
-    b ) apt-get install build-essential
+    b ) apt install build-essential
         ;;
     d ) TMPDIR=${OPTARG}
 	;;
